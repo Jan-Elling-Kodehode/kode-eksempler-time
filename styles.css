@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+}
+
+#two {
+  position: static;
+  top: 100px;
+  background-color: blue;
+}
+
+#four {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container {
+  position: relative;
+  background-color: gray;
+  height: 70vh;
+  width: 50vw;
+}
