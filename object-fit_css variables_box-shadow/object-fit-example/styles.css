@@ -1,0 +1,43 @@
+:root {
+  --length-one: 200px;
+  --length-two: 100px;
+}
+
+div {
+  border: dotted 2px black;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.narrowwide {
+  width: var(--length-one);
+  height: var(--length-two);
+}
+
+.narrowtall {
+  height: var(--length-one);
+  width: var(--length-two);
+}
+
+.fill {
+  object-fit: fill;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.none {
+  object-fit: none;
+}
+
+.scale-down {
+  object-fit: scale-down;
+}
