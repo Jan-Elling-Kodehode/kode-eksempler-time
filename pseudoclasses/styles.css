@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+}
+
+.box:hover {
+  background-color: aqua;
+}
+
+.myinput {
+  background-color: gray;
+}
+
+.myinput:focus {
+  background-color: antiquewhite;
+}
+
+.mybutton {
+  background-color: aquamarine;
+}
+
+.mybutton:active {
+  background-color: azure;
+}
+
+.mybutton:hover {
+  background-color: aqua;
+}
+
+.myAnchor {
+  color: red;
+}
+
+.myAnchor:link {
+  color: rgb(8, 249, 72);
+}
+
+.myAnchor:visited {
+  color: black;
+}
+
+.line {
+  height: 20px;
+  background-color: #444444;
+}
+
+/* .parent *:first-child {
+  background-color: aquamarine;
+}
+
+.parent *:last-child {
+  background-color: rgb(0, 99, 66);
+} */
+
+.parent *:nth-child(even) {
+  background-color: gray;
+}
