@@ -8,6 +8,35 @@
   }
 }
 
+.heading-1 {
+  animation-name: slideInLeft; /*Hvilken animasjon vi skal bruke, da keyframe*/
+  animation-duration: 1s; /*Hvor lang tid animasjonen tar på en runde, da fra 0 til 100, animasjonen vil aldri kjøre på 0*/
+  animation-timing-function: ease-in; /*Samme som transitions*/
+  animation-delay: 1s; /*samme som forrige*/
+  animation-iteration-count: 1; /*hvor mange ganger animasjonen skal kjøre*/
+  animation-direction: normal; /*normal, eller reverse start to end or end to start*/
+
+  /* 
+  * none, starter og slutter på transform i heading
+  * forwards - applyer stylen til siste keyframe når animasjonen slutter
+  * backwards - starter på første keyframe, så blir den flyttet til transform satt her ved slutt
+  * both - starter med første keyframe og slutter med siste keyframe
+  */
+
+  animation-fill-mode: both; /*Hvor den blir satt etter animasjonen er ferdig*/
+
+  transform: translateX(-150px);
+}
+
+.heading-1-shortened {
+  /* animation: slideInLeft 1s ease-in 0s 1 normal both; */
+  animation: slideInLeft 1s ease-in;
+}
+
+/* I stedet for å gi en animasjon til et objekt, så kan vi sette
+"utility class" som spesifikt er for animasjonen, så hvis
+vi vil ha flere elementer med samme animasjon, kan vi bare legge inn classen*/
+
 .slideInLeft {
   animation-name: slideInLeft;
   animation-timing-function: ease-in;
@@ -73,8 +102,8 @@
 }
 
 @keyframes bounce {
-  0%,
-  20%,
+  0%, /*DRY (Do Not Repeat Yourself)*/
+  20%, /*Komma-separere verdier hvor Y skal bli satt til 0px*/
   50%,
   80%,
   100% {
