@@ -7,13 +7,18 @@
     <title>Document</title>
   </head>
   <script>
-    function goToPage(item) {
+    function goToPage(item, folder = false) {
       const currentPath = window.location.pathname;
       console.log(currentPath);
+      let item_folder = "basics";
+      if (folder) {
+        item_folder = "examples";
+      }
+
       if (currentPath.includes(".html")) {
-        window.location.href = `/${item}`;
+        window.location.href = `${item_folder}/${item}`;
       } else {
-        window.location.href = `${currentPath}/${item}`;
+        window.location.href = `${currentPath}/${item_folder}/${item}`;
       }
     }
   </script>
@@ -26,21 +31,52 @@
         <div class="list-container">
           <h2>Basics</h2>
           <ul>
-            <a onclick="goToPage('position_and_input/index.html')">
-              <li>position and input</li></a
-            >
+            <li>
+              <a onclick="goToPage('flexboxes/index.html')">flexboxes</a>
+            </li>
+            <li>
+              <a onclick="goToPage('position_and_input/index.html')"
+                >position and forms/input</a
+              >
+            </li>
+
+            <li>
+              <a
+                onclick="goToPage('object-fit_css_variables_box-shadow/index.html')"
+                >Object_Fit, CSS Variables and box-shadow</a
+              >
+            </li>
+
+            <li>
+              <a onclick="goToPage('animations/index.html')">animations</a>
+            </li>
+
+            <li>
+              <a onclick="goToPage('pseudoclasses/index.html')"
+                >pseudoclasses</a
+              >
+            </li>
+
+            <li>
+              <a onclick="goToPage('transitions/index.html')">transitions</a>
+            </li>
           </ul>
+        </div>
+        <div class="list-container">
+          <h2>Examples</h2>
           <ul>
-            <a onclick="goToPage('flexboxes/index.html')">
-              <li>flexboxes</li></a
-            >
-          </ul>
-          <ul>
-            <a
-              onclick="goToPage('object-fit_css_variables_box-shadow/index.html')"
-            >
-              <li>Object_Fit, CSS Variables and box-shadow</li></a
-            >
+            <li>
+              <a
+                onclick="goToPage('animation-boxes-staggered/index.html', true)"
+                >animation boxes staggered</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="goToPage('flexboxes-product-preview-card/index.html',true)"
+                >flexboxes product preview card</a
+              >
+            </li>
           </ul>
         </div>
       </section>

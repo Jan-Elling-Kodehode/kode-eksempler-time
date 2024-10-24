@@ -1,5 +1,7 @@
 * {
   margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -20,30 +22,41 @@ main {
 }
 
 .list-container {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 500px;
+  height: fit-content;
+  background-color: rgba(255, 0, 0, 0.362);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(1px, 1fr);
+  grid-row-gap: 10px;
 }
 
 a {
+  font-size: 1.25rem;
   text-decoration: none;
-  color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
   user-select: none;
   cursor: pointer;
+  background-color: blue;
+  padding: 2px 3px;
 }
 
 li {
-  background-color: slateblue;
+  cursor: default;
+  height: 100%;
   width: 100%;
   margin-bottom: 5px;
-  height: 2em;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(0, 0, 0);
 }
-li:hover {
+
+a:hover {
   background-color: rgb(121, 110, 198);
   color: rgb(54, 53, 53);
 }
