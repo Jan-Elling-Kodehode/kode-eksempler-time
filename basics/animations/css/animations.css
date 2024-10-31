@@ -23,7 +23,7 @@
   * both - starter med første keyframe og slutter med siste keyframe
   */
 
-  animation-fill-mode: both; /*Hvor den blir satt etter animasjonen er ferdig*/
+  animation-fill-mode: none; /*Hvor den blir satt etter animasjonen er ferdig*/
 
   transform: translateX(-150px);
 }
@@ -58,10 +58,12 @@ vi vil ha flere elementer med samme animasjon, kan vi bare legge inn classen*/
 
 @keyframes slideInRight {
   from {
+    color: red;
     transform: translateX(300px);
   }
 
   to {
+    color: black;
     transform: translateX(0px);
   }
 }
@@ -72,8 +74,7 @@ vi vil ha flere elementer med samme animasjon, kan vi bare legge inn classen*/
 }
 
 @keyframes invisibleToVisible {
-  0%,
-  60% {
+  0% {
     opacity: 0;
   }
 
