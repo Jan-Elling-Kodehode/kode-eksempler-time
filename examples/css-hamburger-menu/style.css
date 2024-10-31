@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-height: 70px;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  height: var(--navbar-height);
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.full-vh {
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: var(--navbar-height);
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: rgb(62, 61, 61);
+  z-index: 1;
+}
+
+/* :checked sjekker om inputen er checked, om den er så vil .menu display:block kjøre */
+#hamburger-toggle:checked ~ .menu {
+  display: block;
+}
+
+#hamburger-toggle {
+  display: none;
+}
+
+.menu-list {
+  width: fit-content;
+}
+
+.menu-list li {
+  width: 100%;
+  color: white;
+  margin-bottom: 5px;
+  list-style: none;
+}
+.menu-list li a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+.menu-list li a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+/* Under scroll så vil den scrolle forbi med sticky navbar uten */
+.scroll-margin {
+  scroll-margin-top: var(--navbar-height);
+}
+
+#hero-section {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
