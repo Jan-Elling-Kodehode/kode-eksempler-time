@@ -10,15 +10,11 @@
     function goToPage(item, folder = "basics") {
       const currentPath = window.location.pathname;
       console.log(currentPath);
-      let item_folder = "basics";
-      if (folder) {
-        item_folder = "examples";
-      }
 
       if (currentPath.includes(".html")) {
-        window.location.href = `${item_folder}/${item}`;
+        window.location.href = `${folder}/${item}`;
       } else {
-        window.location.href = `${currentPath}/${item_folder}/${item}`;
+        window.location.href = `${currentPath}/${folder}/${item}`;
       }
     }
   </script>
@@ -69,23 +65,24 @@
           <ul>
             <li>
               <a
-                onclick="goToPage('animation-boxes-staggered/index.html', true)"
+                onclick="goToPage('animation-boxes-staggered/index.html', 'examples')"
                 >animation boxes staggered</a
               >
             </li>
             <li>
               <a
-                onclick="goToPage('flexboxes-product-preview-card/index.html',true)"
+                onclick="goToPage('flexboxes-product-preview-card/index.html', 'examples')"
                 >flexboxes product preview card</a
               >
             </li>
             <li>
-              <a onclick="goToPage('figma-flexbox-example/index.html',true)"
+              <a
+                onclick="goToPage('figma-flexbox-example/index.html', 'examples')"
                 >Figma flexbox example</a
               >
             </li>
             <li>
-              <a onclick="goToPage('css-hamburger-menu/index.html',true)"
+              <a onclick="goToPage('css-hamburger-menu/index.html', 'examples')"
                 >CSS & HTML only Hamburger Menu</a
               >
             </li>
@@ -95,7 +92,8 @@
           <h2>Javascript</h2>
           <ul>
             <li>
-              <a onclick="goToPage('variables_and_operators/index.html', true)"
+              <a
+                onclick="goToPage('variables_and_operators/index.html', 'javascript')"
                 >animation boxes staggered</a
               >
             </li>
