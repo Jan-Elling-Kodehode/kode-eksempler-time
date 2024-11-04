@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <script>
-    function goToPage(item, folder = false) {
+    function goToPage(item, folder = "basics") {
       const currentPath = window.location.pathname;
       console.log(currentPath);
       let item_folder = "basics";
@@ -87,6 +87,16 @@
             <li>
               <a onclick="goToPage('css-hamburger-menu/index.html',true)"
                 >CSS & HTML only Hamburger Menu</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="list-container">
+          <h2>Javascript</h2>
+          <ul>
+            <li>
+              <a onclick="goToPage('variables_and_operators/index.html', true)"
+                >animation boxes staggered</a
               >
             </li>
           </ul>

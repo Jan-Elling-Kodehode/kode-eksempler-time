@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color: rgb(0, 255, 179);
+}
+
+body {
+  font-size: 13px;
+}
+
+#box {
+  font-size: 2em;
+  /* 26px */
+  width: 10em;
+  height: 100px;
+}
+
+.item {
+  color: var(--color);
+  background-color: blue;
+  /* 52px*/
+  font-size: 2rem;
+}
+
+span {
+  font-size: 2rem;
+  color: var(--color);
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+  background-color: red;
+}
